@@ -44,15 +44,19 @@ vendor.gpsdbglog.enable u:object_r:vendor_mtk_mnld_prop:s0
 vendor.gpsdbglog.       u:object_r:vendor_mtk_mnld_prop:s0
 vendor.debug.gps.       u:object_r:vendor_mtk_mnld_prop:s0
 
-ro.vendor.audio.         u:object_r:vendor_mtk_audio_prop:s0
-vendor.audio.            u:object_r:vendor_mtk_audio_prop:s0
-persist.vendor.audio.    u:object_r:vendor_mtk_audio_prop:s0
 vendor.streamout.        u:object_r:vendor_mtk_audiohal_prop:s0
 vendor.streamin.         u:object_r:vendor_mtk_audiohal_prop:s0
 vendor.a2dp.             u:object_r:vendor_mtk_audiohal_prop:s0
 vendor.audiohal.         u:object_r:vendor_mtk_audiohal_prop:s0
 persist.vendor.audiohal. u:object_r:vendor_mtk_audiohal_prop:s0
 persist.vendor.vow.      u:object_r:vendor_mtk_audiohal_prop:s0
+
+vendor.audio.chk.        u:object_r:vendor_mtk_audio_prop:s0
+persist.vendor.audio.    u:object_r:vendor_mtk_audio_prop:s0
+vendor.audio.            u:object_r:vendor_mtk_audio_prop:s0
+ro.vendor.audio.         u:object_r:vendor_mtk_ro_audio_prop:s0
+
+vendor.audio.voice       u:object_r:vendor_mtk_audio_voice_prop:s0
 
 persist.vendor.connsys.coredump.mode u:object_r:vendor_mtk_coredump_prop:s0
 persist.vendor.connsys.              u:object_r:vendor_mtk_wmt_prop:s0
@@ -406,3 +410,11 @@ persist.vendor.xfrm_support u:object_r:vendor_mtk_xfrm_support_prop:s0
 mtk.vendor.omx.core.log         u:object_r:vendor_mtk_omx_core_prop:s0
 ro.mtk_crossmount_support       u:object_r:vendor_mtk_crossmount_prop:s0
 ro.mtk_deinterlace_support      u:object_r:vendor_mtk_deinterlace_prop:s0
+
+# IMEI
+persist.vendor.radio.imei      u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei             u:object_r:vendor_deviceid_prop:s0
+persist.vendor.radio.meid      u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.meid             u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.sno              u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.psno             u:object_r:vendor_sno_prop:s0

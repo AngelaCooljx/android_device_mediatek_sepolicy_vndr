@@ -238,7 +238,12 @@ allow mtk_hal_audio sysfs_boot_info:file r_file_perms;
 # Purpose: permission for audioserver to use ccci node
 allow mtk_hal_audio ccci_aud_device:chr_file rw_file_perms;
 
-# Date: 2022/12/01
-# Purpose: Allow Audio HAL to get and set vendor_mtk_audio_prop
-get_prop(mtk_hal_audio, vendor_mtk_audio_prop)
 set_prop(mtk_hal_audio, vendor_mtk_audio_prop)
+get_prop(mtk_hal_audio, vendor_mtk_audio_prop)
+
+set_prop(mtk_hal_audio, vendor_mtk_audio_voice_prop)
+
+allow mtk_hal_audio hf_manager_device:chr_file rw_file_perms;
+
+allow mtk_hal_audio persist_data_file:dir r_dir_perms;
+allow mtk_hal_audio persist_data_file:{ file lnk_file } r_file_perms;
